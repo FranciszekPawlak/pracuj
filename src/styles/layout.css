@@ -1,0 +1,34 @@
+.container {
+  background-color: #0f3460;
+  min-height: 100vh;
+}
+.navigation {
+  display: flex;
+  justify-content: center;
+}
+.navigation__list {
+  display: flex;
+  padding: 0.6rem;
+  list-style: none;
+}
+.navigation__link {
+  display: block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 0.6rem;
+  color: white;
+  background-color: #e94560;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0.4rem;
+  transition: 0.3s;
+}
+.navigation__link:hover {
+  color: #0a0505;
+}
+.navigation__link--active {
+  text-decoration: underline;
+}
+.content {
+  padding: 1rem;
+}

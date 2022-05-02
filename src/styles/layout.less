@@ -1,0 +1,42 @@
+@import 'App.less';
+
+.container {
+  background-color: @color-primary;
+  min-height: 100vh;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+    padding: 0.6rem;
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 0.6rem;
+    color: @color-light;
+    background-color: @color-secondary;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 0.4rem;
+    transition: 0.3s;
+
+    &:hover {
+      color: @color-dark;
+    }
+
+    &--active {
+      text-decoration: underline;
+    }
+  }
+}
+
+.content {
+  padding: 1rem;
+}
