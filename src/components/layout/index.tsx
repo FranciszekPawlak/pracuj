@@ -1,5 +1,6 @@
+import { Button } from 'components/button'
 import { Link } from 'react-router-dom'
-import 'styles/layout.css'
+import './style.css'
 
 type Props = { children: React.ReactNode }
 type NavigationLink = { to: string; title: string }
@@ -17,14 +18,9 @@ export const Layout = ({ children }: Props) => {
         <nav className='navigation'>
           <ul className='navigation__list'>
             {navElements.map((item) => (
-              <li key={item.to}>
-                <Link
-                  className={`navigation__link  ${
-                    activeLink === item.to && 'navigation__link--active'
-                  }`}
-                  to={item.to}
-                >
-                  {item.title}
+              <li className='navigation__item' key={item.to}>
+                <Link to={item.to}>
+                  <Button active={activeLink === item.to} title={item.title} />
                 </Link>
               </li>
             ))}

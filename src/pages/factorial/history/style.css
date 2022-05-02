@@ -1,0 +1,17 @@
+.history {
+  width: 50%;
+  margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+}
+.history__item {
+  color: white;
+  padding: 1rem;
+}
+.history__item:nth-child(even) {
+  color: #e94560;
+}
+.history__item:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}

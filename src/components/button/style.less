@@ -1,0 +1,21 @@
+@import './../../styles/variables.less';
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  background-color: @color-secondary;
+  color: @color-light;
+  border-radius: 0.4rem;
+  transition: 0.3s;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: @color-dark;
+  }
+
+  &--active {
+    text-decoration: underline;
+  }
+}

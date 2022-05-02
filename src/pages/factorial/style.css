@@ -1,0 +1,23 @@
+.page {
+  text-align: center;
+}
+.page__title {
+  color: white;
+  margin-bottom: 2rem;
+}
+.page__result {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: white;
+}
+.form {
+  display: flex;
+}
+.form__input {
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  outline: none;
+  border: none;
+  width: 100%;
+  color: #e94560;
+}
