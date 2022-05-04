@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { GithubRepos } from 'pages/githubRepos'
+import { Repositories } from 'pages/repositories'
 import { Layout } from 'components/layout'
 import { Factorial } from 'pages/factorial'
 
@@ -11,7 +11,7 @@ function App() {
           path='/'
           element={
             <Layout>
-              <GithubRepos />
+              <Repositories />
             </Layout>
           }
         />

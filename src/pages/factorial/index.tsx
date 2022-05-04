@@ -3,21 +3,19 @@ import { addToHistory } from 'redux/factorial/factorialSlice'
 import { History } from './history'
 import { useState } from 'react'
 import { Error } from './error'
-import { Button } from 'components/button'
 import { calculateFactorial } from 'utils'
 import { FactorialResult } from 'types'
 import './style.css'
+import { InputForm } from 'components/inputForm'
 
 export const Factorial = () => {
   const [error, setError] = useState<boolean>(false)
-  const [inputValue, setInputValue] = useState<string>('')
   const [currentFactorial, setCurrentFactorial] = useState<FactorialResult | null>(null)
   const dispatch = useAppDispatch()
 
-  const submit = (e: React.SyntheticEvent) => {
-    e.preventDefault()
-    const n = parseInt(inputValue)
-    if (n > 5000) {
+  const submit = (value: string) => {
+    const n = parseInt(value)
+    if (n > 5000 || String(n) == 'NaN') {
       setError(true)
     } else {
       setError(false)
@@ -30,16 +28,12 @@ export const Factorial = () => {
   return (
     <div className='page'>
       <h1 className='page__title'>{content.pageTitle}</h1>
-      <form className='form' onSubmit={submit}>
-        <input
-          className='form__input'
-          type='number'
-          placeholder={content.inputPlaceholder}
-          value={inputValue}
-          onChange={(e: React.FormEvent<HTMLInputElement>) => setInputValue(e.currentTarget.value)}
-        />
-        <Button title={content.buttonTitle} />
-      </form>
+      <InputForm
+        submit={submit}
+        buttonTitle={content.buttonTitle}
+        placeholder={content.inputPlaceholder}
+        type='number'
+      />
       {currentFactorial && (
         <h2 className='page__result'>
           {currentFactorial.n}! = {currentFactorial.result}

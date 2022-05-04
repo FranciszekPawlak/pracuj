@@ -1,0 +1,15 @@
+.repositories__item {
+  border: 1px solid white;
+  border-radius: 0.4rem;
+  padding: 1.2rem;
+  margin-top: 2rem;
+}
+.repositories__item:nth-of-type(even) {
+  border-color: #e94560;
+}
+.repositories__title {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}

@@ -1,0 +1,60 @@
+.btn,
+.commit__button {
+  padding: 0.6rem 1.2rem;
+  background-color: #e94560;
+  color: white;
+  border-radius: 0.4rem;
+  transition: 0.3s;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover,
+.commit__button:hover {
+  color: #0a0505;
+}
+.btn--active,
+.commit__button--active {
+  text-decoration: underline;
+}
+.btn--disabled,
+.commit__button--disabled {
+  background-color: #444;
+}
+.commit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid white;
+  border-radius: 0.4rem;
+  padding: 0.6rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+.commit:nth-of-type(even) {
+  border-color: #e94560;
+}
+.commit__message {
+  font-weight: bold;
+  color: #e94560;
+  margin-bottom: 1rem;
+}
+.commit__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.commit__footer__info__author {
+  font-weight: bold;
+  margin-left: 0.6rem;
+}
+@media (max-width: 1000px) {
+  .commit__footer__info {
+    display: flex;
+    flex-direction: column;
+  }
+  .commit__footer__info__author {
+    margin-left: 0px;
+  }
+}

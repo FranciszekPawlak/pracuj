@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import type { RootState } from 'redux/store'
 import { FactorialState, FactorialResult } from 'types'
 
 const localStorageState = localStorage.getItem('factorialState')
@@ -24,7 +23,5 @@ export const factorialSlice = createSlice({
 })
 
 export const { addToHistory } = factorialSlice.actions
-
-export const selectFactorial = (state: RootState) => state.factorial
 
 export default factorialSlice.reducer

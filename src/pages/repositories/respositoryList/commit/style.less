@@ -1,0 +1,44 @@
+@import '../../../../components//button/style.less';
+@import '../../../../styles/variables.less';
+
+.commit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid white;
+  border-radius: 0.4rem;
+  padding: 0.6rem;
+  color: @color-light;
+  margin-bottom: 1rem;
+  &:nth-of-type(even) {
+    border-color: @color-secondary;
+  }
+  &__message {
+    font-weight: bold;
+    color: @color-secondary;
+    margin-bottom: 1rem;
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__info {
+      &__author {
+        font-weight: bold;
+        margin-left: 0.6rem;
+      }
+    }
+    @media (max-width: 1000px) {
+      &__info {
+        display: flex;
+        flex-direction: column;
+        &__author {
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+  &__button {
+    &:extend(.btn all);
+  }
+}

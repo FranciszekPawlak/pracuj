@@ -15,3 +15,6 @@
 .btn--active {
   text-decoration: underline;
 }
+.btn--disabled {
+  background-color: #444;
+}
