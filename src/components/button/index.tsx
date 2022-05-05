@@ -1,4 +1,4 @@
-import './style.css'
+import './style.scss'
 
 type Props = { title: string; onClick?: () => void; active?: boolean; loading?: boolean }
 

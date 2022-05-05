@@ -1,8 +1,8 @@
 import { InputForm } from 'components/inputForm'
 import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { getRepositoriesWithCommits } from 'redux/repositories/repositoriesSlice'
-import { RepositoryList } from './respositoryList'
-import './style.css'
+import { Repo } from './components/Repo'
+import './style.scss'
 
 export const Repositories = () => {
   const { entities, loading, error } = useAppSelector((state) => state.repositories)
@@ -30,7 +30,15 @@ export const Repositories = () => {
         loading={loading}
         validate={validate}
       />
-      <RepositoryList list={entities} />
+
+      {entities.length > 0 && (
+        <div>
+          {entities.map((item) => (
+            <Repo key={item.repo.node_id} repository={item} />
+          ))}
+        </div>
+      )}
+
       {error && <span className='repositories__error'>{error}</span>}
     </div>
   )

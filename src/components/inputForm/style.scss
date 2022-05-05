@@ -1,8 +1,7 @@
-@import './../../styles/variables.less';
+@import './../../styles/base.scss';
 
 .form {
-  display: flex;
-  flex-direction: column;
+  @include vertical;
   margin-bottom: 1.2rem;
   margin-top: 1.2rem;
   &__group {
@@ -13,9 +12,9 @@
     width: 100%;
     margin-top: 0.6rem;
     margin-bottom: 0.6rem;
-    border: 1px solid @color-error;
+    border: 1px solid $color-error;
     padding: 0.4rem;
-    color: @color-error;
+    color: $color-error;
     border-radius: 0.4rem;
   }
 }

@@ -1,21 +1,19 @@
-@import '../../../../components//button/style.less';
-@import '../../../../styles/variables.less';
+@import './../../../styles/base.scss';
 
 .commit {
-  display: flex;
-  flex-direction: column;
+  @include vertical;
   justify-content: space-between;
   border: 1px solid white;
   border-radius: 0.4rem;
   padding: 0.6rem;
-  color: @color-light;
+  color: $color-light;
   margin-bottom: 1rem;
   &:nth-of-type(even) {
-    border-color: @color-secondary;
+    border-color: $color-secondary;
   }
   &__message {
     font-weight: bold;
-    color: @color-secondary;
+    color: $color-secondary;
     margin-bottom: 1rem;
   }
   &__footer {
@@ -30,8 +28,7 @@
     }
     @media (max-width: 1000px) {
       &__info {
-        display: flex;
-        flex-direction: column;
+        @include vertical;
         &__author {
           margin-left: 0px;
         }
@@ -39,6 +36,7 @@
     }
   }
   &__button {
-    &:extend(.btn all);
+    @include vertical;
+    @include btn;
   }
 }

@@ -1,11 +1,11 @@
 import { useAppDispatch } from 'redux/hooks'
 import { addToHistory } from 'redux/factorial/factorialSlice'
-import { History } from './history'
+import { History } from './components/History'
 import { useState } from 'react'
-import { Error } from './error'
+import { Error } from './components/Error'
 import { calculateFactorial } from 'utils'
 import { FactorialResult } from 'types'
-import './style.css'
+import './style.scss'
 import { InputForm } from 'components/inputForm'
 
 export const Factorial = () => {

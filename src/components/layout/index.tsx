@@ -1,6 +1,6 @@
 import { Button } from 'components/button'
 import { Link } from 'react-router-dom'
-import './style.css'
+import './style.scss'
 
 type Props = { children: React.ReactNode }
 type NavigationLink = { to: string; title: string }

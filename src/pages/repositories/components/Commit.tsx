@@ -1,6 +1,6 @@
 import { Committer } from 'types'
 import { toDateTimeString } from 'utils'
-import './style.css'
+import './commit.scss'
 
 type Props = {
   committer: Committer

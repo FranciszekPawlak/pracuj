@@ -1,4 +1,4 @@
-@import './../../../styles/variables.less';
+@import './../../../styles/base.scss';
 
 .history {
   width: 50%;
@@ -7,13 +7,13 @@
   margin-right: auto;
   list-style: none;
   &__item {
-    color: @color-light;
+    color: $color-light;
     padding: 1rem;
     &:nth-child(even) {
-      color: @color-secondary;
+      color: $color-secondary;
     }
   }
   &__item:hover {
-    background-color: @color-transparent;
+    background-color: $color-transparent;
   }
 }

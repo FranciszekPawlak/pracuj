@@ -1,4 +1,4 @@
-@import './../../../styles/variables.less';
+@import './../../../styles/base.scss';
 
 .error {
   position: fixed;
@@ -11,8 +11,8 @@
   text-align: center;
   width: 100vw;
   height: 100vh;
-  background-color: @color-transparent;
-  color: @color-light;
+  background-color: $color-transparent;
+  color: $color-light;
 
   &__description {
     margin-top: 1.2rem;

@@ -1,7 +1,7 @@
-@import './../../styles/variables.less';
+@import './../../styles/base.scss';
 
 .container {
-  background-color: @color-primary;
+  background-color: $color-primary;
   min-height: 100vh;
 }
 

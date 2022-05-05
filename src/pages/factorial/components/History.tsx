@@ -1,4 +1,4 @@
-import './style.css'
+import './history.scss'
 import { useAppSelector } from 'redux/hooks'
 
 const NUMBER_OF_ROWS = 10

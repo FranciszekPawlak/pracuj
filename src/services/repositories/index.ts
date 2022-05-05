@@ -14,7 +14,7 @@ export const getGithubRepositoriesWithCommitsByLogin = async ({
   const repositoriesWithCommits: RepositoriesWithCommits[] = []
 
   const { status, data } = await axios.get(createGithubRepositoryRequestURL({ login, page }))
-  console.log(status)
+
   if (status === 200 && data.items) {
     await Promise.all(
       data.items.map(async (repo: ResponseRepository) => {

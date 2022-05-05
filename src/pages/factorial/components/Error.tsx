@@ -1,6 +1,6 @@
 import { Button } from 'components/button'
 import { Dispatch, SetStateAction } from 'react'
-import './style.css'
+import './error.scss'
 
 type Props = { setError: Dispatch<SetStateAction<boolean>> }
 

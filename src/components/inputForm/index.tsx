@@ -1,8 +1,7 @@
 import { Button } from 'components/button'
 import { Input } from 'components/input'
 import { SyntheticEvent, useState } from 'react'
-import { useAppSelector } from 'redux/hooks'
-import './style.css'
+import './style.scss'
 type Props = {
   submit: (value: string) => void
   placeholder: string

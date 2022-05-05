@@ -1,18 +1,19 @@
-@import '../../../styles/variables.less';
-.repositories {
+@import './../../../styles/base.scss';
+
+.repository {
   &__item {
-    border: 1px solid @color-light;
+    border: 1px solid $color-light;
     border-radius: 0.4rem;
     padding: 1.2rem;
     margin-top: 2rem;
 
     &:nth-of-type(even) {
-      border-color: @color-secondary;
+      border-color: $color-secondary;
     }
   }
   &__title {
     font-size: 2rem;
-    color: @color-light;
+    color: $color-light;
     text-align: center;
     margin-bottom: 1.2rem;
   }

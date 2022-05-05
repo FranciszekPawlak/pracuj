@@ -1,0 +1,13 @@
+@mixin vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin rounded {
+  border-radius: 0.4rem;
+}
