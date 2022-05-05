@@ -2,7 +2,7 @@ import { InputForm } from 'components/inputForm'
 import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { getRepositoriesWithCommits } from 'redux/repositories/repositoriesSlice'
 import { Repo } from './components/Repo'
-import { Error } from './components/Error'
+import { Error } from 'components/error'
 import { compareRepoDate } from 'utils'
 import './style.scss'
 
