@@ -15,36 +15,8 @@
 }
 
 @mixin mobile {
-  @media (max-width: 1000px) {
+  @media ($max-mobile-width) {
     @content;
-  }
-}
-
-@mixin btn {
-  padding: 0.6rem 1.2rem;
-  background-color: $color-secondary;
-  color: $color-light;
-  border-radius: 0.4rem;
-  transition: 0.3s;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    color: $color-dark;
-  }
-
-  &--active {
-    text-decoration: underline;
-  }
-
-  &--disabled {
-    background-color: $color-disabled;
-    &:hover {
-      color: $color-light;
-      cursor: not-allowed;
-    }
   }
 }
 
@@ -185,5 +157,38 @@
     margin-bottom: $space-xl;
   } @else {
     margin-#{$placemenet}: $space-xl;
+  }
+}
+
+@mixin btn {
+  background-color: $color-secondary;
+  color: $color-light;
+  transition: 0.3s;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  @include rounded;
+  @include p-sm('y');
+  @include p-lg('x');
+
+  &:hover {
+    color: $color-dark;
+    background-color: darken($color-secondary, 5%);
+  }
+
+  &--active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+
+  &--disabled {
+    background-color: $color-disabled;
+
+    &:hover {
+      color: $color-light;
+      background-color: darken($color-disabled, 5%);
+      cursor: not-allowed;
+    }
   }
 }

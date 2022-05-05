@@ -9,7 +9,10 @@
 
   &__item {
     color: $color-light;
+    transition: 0.5s;
+    @include rounded;
     @include p-md('all');
+    @include m-md('bottom');
 
     &:nth-child(even) {
       color: $color-secondary;
@@ -17,6 +20,7 @@
   }
 
   &__item:hover {
-    background-color: $color-transparent;
+    background-color: $color-light;
+    color: $color-primary;
   }
 }

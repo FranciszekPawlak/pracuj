@@ -1,13 +1,19 @@
 @import './../../../styles/base.scss';
 
 .commit {
-  @include vertical;
   justify-content: space-between;
   border: 1px solid white;
-  border-radius: 0.4rem;
-  padding: 0.6rem;
+  transition: 0.5s;
   color: $color-light;
-  margin-bottom: 1rem;
+  @include vertical;
+  @include m-md('bottom');
+  @include p-sm('all');
+  @include rounded;
+
+  &:hover {
+    background-color: $color-light;
+    color: $color-primary;
+  }
 
   &:nth-of-type(even) {
     border-color: $color-secondary;

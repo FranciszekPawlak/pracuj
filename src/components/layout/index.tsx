@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './style.scss'
 
 export const Layout = ({ children }: Props) => {
-  const activeLink = window.location.pathname
+  const activeLink = window.location.href.split('#')[1]
   const navElements: NavigationLink[] = [
     { to: '/', title: 'Repo searcher' },
     { to: '/factorial', title: 'Factorial' },
