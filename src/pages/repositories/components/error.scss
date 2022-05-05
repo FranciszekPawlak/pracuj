@@ -1,0 +1,16 @@
+@import './../../../styles/base.scss';
+
+.repo-error {
+  @include vertical;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  &__icon {
+    margin-bottom: 1.2rem;
+  }
+  &__message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $color-light;
+  }
+}

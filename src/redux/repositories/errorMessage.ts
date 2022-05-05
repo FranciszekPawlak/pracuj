@@ -1,6 +1,6 @@
 export const errorMessage = (err: any) => {
   if (err?.response?.status === 422) {
-    return 'Error: Try another phraze'
+    return 'Try another phraze'
   }
   if (err?.response?.status === 403) {
     return 'Error: You have exceeded the query limit'

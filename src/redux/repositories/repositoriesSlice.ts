@@ -26,9 +26,14 @@ export const repositoriesSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getRepositoriesWithCommits.fulfilled, (state, action) => {
-      state.error = null
       state.loading = false
-      state.entities = action.payload
+      if (action.payload && action.payload.length > 0) {
+        state.entities = action.payload
+        state.error = null
+      } else {
+        state.entities = []
+        state.error = 'No repositories for this user'
+      }
     }),
       builder.addCase(getRepositoriesWithCommits.pending, (state) => {
         state.loading = true

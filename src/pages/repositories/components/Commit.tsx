@@ -2,13 +2,6 @@ import { Committer } from 'types'
 import { toDateTimeString } from 'utils'
 import './commit.scss'
 
-type Props = {
-  committer: Committer
-  message: string
-  html_url: string
-  sha: string
-}
-
 export const Commit = ({ committer, message, html_url, sha }: Props) => {
   return (
     <div className='commit'>
@@ -24,4 +17,11 @@ export const Commit = ({ committer, message, html_url, sha }: Props) => {
       </div>
     </div>
   )
+}
+
+type Props = {
+  committer: Committer
+  message: string
+  html_url: string
+  sha: string
 }

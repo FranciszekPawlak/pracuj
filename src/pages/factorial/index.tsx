@@ -15,6 +15,7 @@ export const Factorial = () => {
 
   const submit = (value: string) => {
     const n = parseInt(value)
+    console.log(value, String(n))
     if (n > 5000 || String(n) == 'NaN') {
       setError(true)
     } else {

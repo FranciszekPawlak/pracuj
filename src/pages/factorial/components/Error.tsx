@@ -2,8 +2,6 @@ import { Button } from 'components/button'
 import { Dispatch, SetStateAction } from 'react'
 import './error.scss'
 
-type Props = { setError: Dispatch<SetStateAction<boolean>> }
-
 export const Error = ({ setError }: Props) => {
   return (
     <div className='error'>
@@ -18,6 +16,8 @@ export const Error = ({ setError }: Props) => {
     </div>
   )
 }
+
+type Props = { setError: Dispatch<SetStateAction<boolean>> }
 
 const content = {
   imgAlt: 'explosion animation',

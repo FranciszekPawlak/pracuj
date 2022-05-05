@@ -1,6 +1,13 @@
 @import './../../../styles/base.scss';
 
 .repository {
+  padding: 1rem;
+  border: 1px solid $color-secondary;
+  margin-bottom: 1.2rem;
+  @include rounded;
+  &:nth-of-type(even) {
+    border: 1px solid $color-light;
+  }
   &__item {
     border: 1px solid $color-light;
     border-radius: 0.4rem;
@@ -11,10 +18,29 @@
       border-color: $color-secondary;
     }
   }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+    @include mobile {
+      @include vertical;
+      align-items: center;
+    }
+  }
+
   &__title {
     font-size: 2rem;
     color: $color-light;
     text-align: center;
     margin-bottom: 1.2rem;
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+
+  &__date {
+    color: $color-light;
   }
 }

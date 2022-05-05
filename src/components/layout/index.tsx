@@ -2,13 +2,10 @@ import { Button } from 'components/button'
 import { Link } from 'react-router-dom'
 import './style.scss'
 
-type Props = { children: React.ReactNode }
-type NavigationLink = { to: string; title: string }
-
 export const Layout = ({ children }: Props) => {
   const activeLink = window.location.pathname
   const navElements: NavigationLink[] = [
-    { to: '/', title: 'Find Github project' },
+    { to: '/', title: 'Repo searcher' },
     { to: '/factorial', title: 'Factorial' },
   ]
 
@@ -31,3 +28,6 @@ export const Layout = ({ children }: Props) => {
     </div>
   )
 }
+
+type Props = { children: React.ReactNode }
+type NavigationLink = { to: string; title: string }

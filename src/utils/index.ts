@@ -1,4 +1,4 @@
-import { URLRequestParams } from 'types'
+import { RepositoriesWithCommits, URLRequestParams } from 'types'
 
 const PER_PAGE = 5
 
@@ -42,12 +42,14 @@ export const validate = (validations: string[], value: string) => {
 }
 
 export const createGithubRepositoryRequestURL = ({ login, page }: URLRequestParams) => {
-  const queryParams = 'q=' + encodeURIComponent(`user:${login}`)
-  return `https://api.github.com/search/repositories?${queryParams}&sort:updated&order=desc&page=${page}&per_page=${PER_PAGE}`
+  return `https://api.github.com/users/${login}/repos?sort=updated&page=${page}&per_page=${PER_PAGE}`
 }
 
 export const createRepositoryCommitsRequestURL = (url: string) => {
-  return `${url.split('{')[0]}?sort:updated&order=desc&page=1&per_page=${PER_PAGE}`
+  return `${url.split('{')[0]}?sort=updated&page=1&per_page=${PER_PAGE}`
 }
 
 export const toDateTimeString = (value: string) => new Date(value).toLocaleString()
+
+export const compareRepoDate = (a: RepositoriesWithCommits, b: RepositoriesWithCommits) =>
+  new Date(a.repo.updated_at) > new Date(b.repo.updated_at) ? -1 : 1
