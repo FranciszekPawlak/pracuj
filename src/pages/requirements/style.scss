@@ -2,6 +2,8 @@
 
 .requirements {
   color: $color-light;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
 
   h1 {
     @include m-lg('y');

@@ -15,7 +15,7 @@
 }
 
 @mixin mobile {
-  @media ($max-mobile-width) {
+  @media (max-width: $max-mobile-width) {
     @content;
   }
 }
@@ -180,6 +180,7 @@
   &--active {
     text-decoration: underline;
     text-decoration-thickness: 2px;
+    background-color: darken($color-secondary, 5%);
   }
 
   &--disabled {
