@@ -16,7 +16,7 @@
   &__message {
     font-weight: bold;
     color: $color-secondary;
-    margin-bottom: 1rem;
+    @include m-md('bottom');
   }
 
   &__footer {
@@ -27,7 +27,7 @@
     &__info {
       &__author {
         font-weight: bold;
-        margin-left: 0.6rem;
+        @include m-sm('left');
       }
 
       @include mobile {

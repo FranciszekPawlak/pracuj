@@ -15,9 +15,9 @@
   color: $color-light;
 
   &__description {
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
+    @include m-lg('y');
   }
+
   &__img {
     height: 282px;
   }

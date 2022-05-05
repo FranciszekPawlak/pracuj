@@ -7,6 +7,7 @@ export const Layout = ({ children }: Props) => {
   const navElements: NavigationLink[] = [
     { to: '/', title: 'Repo searcher' },
     { to: '/factorial', title: 'Factorial' },
+    { to: '/requirements', title: 'Requirements' },
   ]
 
   return (

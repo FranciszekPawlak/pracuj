@@ -1,8 +1,8 @@
 @import './../../styles/base.scss';
 
 .input {
-  padding: 0.4rem;
-  border-radius: 0.4rem;
+  @include p-sm('all');
+  @include rounded;
   outline: none;
   border: none;
   width: 100%;

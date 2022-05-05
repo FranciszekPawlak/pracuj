@@ -11,18 +11,24 @@
 
   &__list {
     display: flex;
-    padding: 0.6rem;
     list-style: none;
+    @include p-sm('all');
+    @include mobile {
+      @include vertical;
+      align-items: center;
+    }
   }
 
   &__item {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    @include m-md('x');
+    @include mobile {
+      @include m-sm('bottom');
+    }
   }
 }
 
 .content {
-  padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
+  @include p-md('all');
 }

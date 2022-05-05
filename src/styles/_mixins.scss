@@ -1,3 +1,5 @@
+@import './variables';
+
 @mixin vertical {
   display: flex;
   flex-direction: column;
@@ -15,5 +17,173 @@
 @mixin mobile {
   @media (max-width: 1000px) {
     @content;
+  }
+}
+
+@mixin btn {
+  padding: 0.6rem 1.2rem;
+  background-color: $color-secondary;
+  color: $color-light;
+  border-radius: 0.4rem;
+  transition: 0.3s;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-dark;
+  }
+
+  &--active {
+    text-decoration: underline;
+  }
+
+  &--disabled {
+    background-color: $color-disabled;
+    &:hover {
+      color: $color-light;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@mixin p-xs($placemenet) {
+  @if $placemenet == 'all' {
+    padding: $space-xs;
+  } @else if $placemenet == 'x' {
+    padding-left: $space-xs;
+    padding-right: $space-xs;
+  } @else if $placemenet == 'y' {
+    padding-top: $space-xs;
+    padding-bottom: $space-xs;
+  } @else {
+    padding-#{$placemenet}: $space-xs;
+  }
+}
+
+@mixin p-sm($placemenet) {
+  @if $placemenet == 'all' {
+    padding: $space-sm;
+  } @else if $placemenet == 'x' {
+    padding-left: $space-sm;
+    padding-right: $space-sm;
+  } @else if $placemenet == 'y' {
+    padding-top: $space-sm;
+    padding-bottom: $space-sm;
+  } @else {
+    padding-#{$placemenet}: $space-sm;
+  }
+}
+
+@mixin p-md($placemenet) {
+  @if $placemenet == 'all' {
+    padding: $space-md;
+  } @else if $placemenet == 'x' {
+    padding-left: $space-md;
+    padding-right: $space-md;
+  } @else if $placemenet == 'y' {
+    padding-top: $space-md;
+    padding-bottom: $space-md;
+  } @else {
+    padding-#{$placemenet}: $space-md;
+  }
+}
+
+@mixin p-lg($placemenet) {
+  @if $placemenet == 'all' {
+    padding: $space-lg;
+  } @else if $placemenet == 'x' {
+    padding-left: $space-lg;
+    padding-right: $space-lg;
+  } @else if $placemenet == 'y' {
+    padding-top: $space-lg;
+    padding-bottom: $space-lg;
+  } @else {
+    padding-#{$placemenet}: $space-lg;
+  }
+}
+
+@mixin p-xl($placemenet) {
+  @if $placemenet == 'all' {
+    padding: $space-xl;
+  } @else if $placemenet == 'x' {
+    padding-left: $space-xl;
+    padding-right: $space-xl;
+  } @else if $placemenet == 'y' {
+    padding-top: $space-xl;
+    padding-bottom: $space-xl;
+  } @else {
+    padding-#{$placemenet}: $space-xl;
+  }
+}
+
+@mixin m-xs($placemenet) {
+  @if $placemenet == 'all' {
+    margin: $space-xs;
+  } @else if $placemenet == 'x' {
+    margin-left: $space-xs;
+    margin-right: $space-xs;
+  } @else if $placemenet == 'y' {
+    margin-top: $space-xs;
+    margin-bottom: $space-xs;
+  } @else {
+    margin-#{$placemenet}: $space-xs;
+  }
+}
+
+@mixin m-sm($placemenet) {
+  @if $placemenet == 'all' {
+    margin: $space-sm;
+  } @else if $placemenet == 'x' {
+    margin-left: $space-sm;
+    margin-right: $space-sm;
+  } @else if $placemenet == 'y' {
+    margin-top: $space-sm;
+    margin-bottom: $space-sm;
+  } @else {
+    margin-#{$placemenet}: $space-sm;
+  }
+}
+
+@mixin m-md($placemenet) {
+  @if $placemenet == 'all' {
+    margin: $space-md;
+  } @else if $placemenet == 'x' {
+    margin-left: $space-md;
+    margin-right: $space-md;
+  } @else if $placemenet == 'y' {
+    margin-top: $space-md;
+    margin-bottom: $space-md;
+  } @else {
+    margin-#{$placemenet}: $space-md;
+  }
+}
+
+@mixin m-lg($placemenet) {
+  @if $placemenet == 'all' {
+    margin: $space-lg;
+  } @else if $placemenet == 'x' {
+    margin-left: $space-lg;
+    margin-right: $space-lg;
+  } @else if $placemenet == 'y' {
+    margin-top: $space-lg;
+    margin-bottom: $space-lg;
+  } @else {
+    margin-#{$placemenet}: $space-lg;
+  }
+}
+
+@mixin m-xl($placemenet) {
+  @if $placemenet == 'all' {
+    margin: $space-xl;
+  } @else if $placemenet == 'x' {
+    margin-left: $space-xl;
+    margin-right: $space-xl;
+  } @else if $placemenet == 'y' {
+    margin-top: $space-xl;
+    margin-bottom: $space-xl;
+  } @else {
+    margin-#{$placemenet}: $space-xl;
   }
 }

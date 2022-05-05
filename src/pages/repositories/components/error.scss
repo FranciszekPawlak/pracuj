@@ -5,11 +5,13 @@
   align-items: center;
   justify-content: center;
   height: 50vh;
+
   &__icon {
-    margin-bottom: 1.2rem;
+    @include m-lg('bottom');
   }
+
   &__message {
-    font-size: 1.2rem;
+    font-size: $space-lg;
     font-weight: bold;
     color: $color-light;
   }

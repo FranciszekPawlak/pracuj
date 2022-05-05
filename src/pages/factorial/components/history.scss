@@ -6,13 +6,16 @@
   margin-left: auto;
   margin-right: auto;
   list-style: none;
+
   &__item {
     color: $color-light;
-    padding: 1rem;
+    @include p-md('all');
+
     &:nth-child(even) {
       color: $color-secondary;
     }
   }
+
   &__item:hover {
     background-color: $color-transparent;
   }

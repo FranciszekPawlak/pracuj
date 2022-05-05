@@ -1,0 +1,31 @@
+@import './../../styles/base.scss';
+
+.requirements {
+  color: $color-light;
+
+  h1 {
+    @include m-lg('y');
+  }
+
+  ul,
+  ol {
+    padding-left: 40px;
+    margin-top: 13px;
+
+    ul {
+      margin-top: 0;
+    }
+  }
+
+  p {
+    margin-bottom: 13px;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  a {
+    color: $color-secondary;
+  }
+}

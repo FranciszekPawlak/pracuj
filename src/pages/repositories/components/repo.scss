@@ -1,18 +1,20 @@
 @import './../../../styles/base.scss';
 
 .repository {
-  padding: 1rem;
   border: 1px solid $color-secondary;
-  margin-bottom: 1.2rem;
+  @include p-md('all');
+  @include m-lg('bottom');
   @include rounded;
+
   &:nth-of-type(even) {
     border: 1px solid $color-light;
   }
+
   &__item {
     border: 1px solid $color-light;
-    border-radius: 0.4rem;
-    padding: 1.2rem;
-    margin-top: 2rem;
+    @include rounded;
+    @include p-lg('all');
+    @include m-xl('top');
 
     &:nth-of-type(even) {
       border-color: $color-secondary;
@@ -23,7 +25,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 1.2rem;
+    @include m-lg('bottom');
     @include mobile {
       @include vertical;
       align-items: center;
@@ -31,10 +33,11 @@
   }
 
   &__title {
-    font-size: 2rem;
+    font-size: $space-xl;
     color: $color-light;
     text-align: center;
-    margin-bottom: 1.2rem;
+    @include m-lg('bottom');
+
     &:hover {
       color: $color-secondary;
     }
