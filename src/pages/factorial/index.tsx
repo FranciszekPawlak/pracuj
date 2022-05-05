@@ -33,6 +33,7 @@ export const Factorial = () => {
         buttonTitle={content.buttonTitle}
         placeholder={content.inputPlaceholder}
         type='number'
+        validations={['required']}
       />
       {currentFactorial && (
         <h2 className='page__result'>

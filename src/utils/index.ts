@@ -10,6 +10,37 @@ export const calculateFactorial = (n: number) => {
   return value
 }
 
+export const validate = (validations: string[], value: string) => {
+  const errors: string[] = []
+  validations.forEach((validation) => {
+    const { rule, param } = { rule: validation.split(':')[0], param: validation.split(':')[1] }
+    switch (rule) {
+      case 'required':
+        !value && errors.push('Field is required')
+        break
+      case 'minString':
+        parseInt(param) > value.length &&
+          errors.push('Field must be at least ' + param + ' characters long')
+        break
+      case 'maxString':
+        parseInt(param) < value.length &&
+          errors.push('Field must be at most ' + param + ' characters long')
+        break
+      case 'minNumber':
+        parseInt(param) > parseInt(value) &&
+          errors.push('The number must be greather than ' + param)
+        break
+      case 'maxNumber':
+        parseInt(param) < parseInt(value) &&
+          errors.push('The number cannot be greater than' + param)
+        break
+      default:
+        break
+    }
+  })
+  return errors
+}
+
 export const createGithubRepositoryRequestURL = ({ login, page }: URLRequestParams) => {
   const queryParams = 'q=' + encodeURIComponent(`user:${login}`)
   return `https://api.github.com/search/repositories?${queryParams}&sort:updated&order=desc&page=${page}&per_page=${PER_PAGE}`

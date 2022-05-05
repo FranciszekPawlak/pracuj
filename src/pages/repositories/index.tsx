@@ -7,17 +7,8 @@ import './style.scss'
 export const Repositories = () => {
   const { entities, loading, error } = useAppSelector((state) => state.repositories)
   const dispatch = useAppDispatch()
-
   const submit = (value: string) => dispatch(getRepositoriesWithCommits({ login: value, page: 1 }))
-  const validate = (value: string) => {
-    if (!value) {
-      return content.validateRequired
-    } else if (value.length > 100) {
-      return content.validateTooLong
-    } else {
-      return null
-    }
-  }
+  const validations = ['required', 'minString:3', 'maxString:5']
 
   return (
     <div className='repositories'>
@@ -28,7 +19,7 @@ export const Repositories = () => {
         buttonTitle={content.buttonTitle}
         type='text'
         loading={loading}
-        validate={validate}
+        validations={validations}
       />
 
       {entities.length > 0 && (
@@ -48,6 +39,4 @@ const content = {
   pageTitle: 'Find Github repositories by login',
   inputPlaceholder: 'Enter a login',
   buttonTitle: 'Search',
-  validateRequired: 'Login is required',
-  validateTooLong: 'Login is too long',
 }

@@ -21,5 +21,9 @@
 
   &--disabled {
     background-color: $color-disabled;
+    &:hover {
+      color: $color-light;
+      cursor: not-allowed;
+    }
   }
 }
