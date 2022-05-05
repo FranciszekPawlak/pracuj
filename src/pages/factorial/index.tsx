@@ -5,8 +5,9 @@ import { useState } from 'react'
 import { Error } from './components/Error'
 import { calculateFactorial } from 'utils'
 import { FactorialResult } from 'types'
-import './style.scss'
 import { InputForm } from 'components/inputForm'
+import { useLocalStorageHistory } from 'hooks/useLocalStorageHistory'
+import './style.scss'
 
 export const Factorial = () => {
   const [error, setError] = useState<boolean>(false)
@@ -15,7 +16,6 @@ export const Factorial = () => {
 
   const submit = (value: string) => {
     const n = parseInt(value)
-    console.log(value, String(n))
     if (n > 5000 || String(n) == 'NaN') {
       setError(true)
     } else {
@@ -25,6 +25,8 @@ export const Factorial = () => {
       dispatch(addToHistory({ n, result }))
     }
   }
+
+  useLocalStorageHistory()
 
   return (
     <div className='page'>

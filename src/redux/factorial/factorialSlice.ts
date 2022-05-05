@@ -12,9 +12,15 @@ export const factorialSlice = createSlice({
     addToHistory: (state, action: PayloadAction<FactorialResult>) => {
       state.value = [action.payload, ...state.value]
     },
+    loadExsistingHistory: (state, action: PayloadAction<FactorialResult[]>) => {
+      state.value = action.payload
+    },
+    clearHistory: (state) => {
+      state.value = []
+    },
   },
 })
 
-export const { addToHistory } = factorialSlice.actions
+export const { addToHistory, loadExsistingHistory, clearHistory } = factorialSlice.actions
 
 export default factorialSlice.reducer

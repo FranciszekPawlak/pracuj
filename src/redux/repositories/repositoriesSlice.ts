@@ -3,6 +3,8 @@ import { getGithubRepositoriesWithCommitsByLogin } from 'services/repositories'
 import { RepositoriesState, URLRequestParams } from 'types'
 import { errorMessage } from './errorMessage'
 
+const EMPTY_USER_REPOS_MESSAGE = 'No repositories for this user'
+
 export const getRepositoriesWithCommits = createAsyncThunk(
   'repositories/getRepositoriesWithCommits',
   async (params: URLRequestParams, { rejectWithValue }) => {
@@ -32,7 +34,7 @@ export const repositoriesSlice = createSlice({
         state.error = null
       } else {
         state.entities = []
-        state.error = 'No repositories for this user'
+        state.error = EMPTY_USER_REPOS_MESSAGE
       }
     }),
       builder.addCase(getRepositoriesWithCommits.pending, (state) => {
