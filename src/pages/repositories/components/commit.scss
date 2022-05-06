@@ -24,18 +24,13 @@
     color: $color-secondary;
     @include m-md('bottom');
   }
-
-  &__footer {
+  &__footer,
+  .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     &__info {
-      &__author {
-        font-weight: bold;
-        @include m-sm('left');
-      }
-
       @include mobile {
         @include vertical;
         &__author {
@@ -43,10 +38,15 @@
         }
       }
     }
-  }
 
-  &__button {
-    @include vertical;
-    @include btn;
+    &__author {
+      font-weight: bold;
+      @include m-sm('left');
+    }
+
+    &__button {
+      @include vertical;
+      @include btn;
+    }
   }
 }
